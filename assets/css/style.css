@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body{
+    background: linear-gradient(60deg, #42ecab, #f797da, #e7f885 );
+}
+.m-container>.up-header{
+    background-color: rgb(88, 88, 221);
+}
+.m-container>.up-header>.header-items{
+    margin: 0 60px;
+}
+.m-container>.up-header>.header-items>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.m-container>.up-header>.header-items>ul>li{
+    padding: 10px 20px;
+}
+.m-container>.up-header>.header-items>ul>li>a{
+    padding: 0 10px;
+    font-size: 1.2em;
+    color: rgb(252, 252, 252);
+}
+.fa-phone{
+    font-size: 18px;
+}
+.fa-envelope{
+    font-size: 18px;
+}
+.navbar-brand>img{
+    width: 160px;
+    height: 35px;
+}
+.dropdown{
+    padding: 0 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.home,#hm>a{
+    color: black;
+}
+#about,#abt>a{
+    color: rgb(5, 175, 119);
+}
+#learn,#lea>a{
+    color: rgb(253, 83, 111);
+}
+#franchise,#fran>a{
+    color: rgb(5, 199, 5);
+}
+#contact,#con>a{
+    color: rgb(41, 139, 252);
+}
+#gallery,#gal>a{
+    color: rgb(233, 95, 233);
+}
+#inpt{
+    width: 100px;
+    display: inline;
+}
+#dropdown{
+    width: 120px;
+}
+.tab{
+    width: 500px;
+    height: 700px;
+    background-color: aqua;
+}
+
+

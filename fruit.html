@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url(./assets/images/fruits.jpg);
+      background-size: 100% 100%;
+      background-position: center;
+      overflow: hidden;
+    }
+    .ocean {
+      height: 220px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+    .water {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      animation: water 10s linear infinite;
+    }
+    @keyframes water {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(1000px);
+      }
+    }
+    .boat {
+      width: 200px;
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .boat img {
+      width: 100%;
+      -webkit-box-reflect: below 0
+        linear-gradient(rgba(255, 225, 255, 0.1), rgba(255, 225, 255, 0.6));
+      animation: boat 2s linear infinite;
+    }
+    @keyframes boat {
+      0% {
+        transform: rotate(0deg) translateY(0);
+      }
+      25% {
+        transform: rotate(-1deg) translateY(-3px);
+      }
+      50% {
+        transform: rotate(0deg) translateY(-5px);
+      }
+      75% {
+        transform: rotate(1deg) translateY(-3px);
+      }
+      100% {
+        transform: rotate(0deg) translateY(0);
+      }
+    }
+    .cloud {
+      height: 250px;
+      position: absolute;
+      right: 0;
+      animation: cloud 10s linear infinite;
+    }
+    @keyframes cloud {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(500px);
+      }
+    }
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(60deg, #42ecab, #f797da, #e7f885 );
+      min-height: 100vh;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px 50px;
+      padding: 100px 50px;
+    }
+    .container .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 300px;
+      height: 350px;
+      background-color: #fff;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    }
+    .container .card:hover {
+      height: 430px;
+    }
+    .container .card .imgbox {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      height: 220px;
+      background: #333;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: 0.5s;
+    }
+    .container .card:hover .imgbox {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 2);
+    }
+
+    .container .card .imgbox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      object-fit: 100% 100%;
+    }
+    .container .card .content {
+      position: absolute;
+      top: 252px;
+      width: 100%;
+      padding: 0 30px;
+      height: 35px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .container .card:hover .content {
+      height: 350px;
+      top: 130px;
+    }
+    .container .card .content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #009688;
+    }
+    .container .card .content p {
+      color: #333;
+    }
+    .container .card .content a {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      padding: 8px 25px;
+      background: #00bcd4;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .h1{
+      width: 100%;
+      text-align: center;
+    }
+    .h1>h1{
+      padding: 20px 0;
+    }
+  </style>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="header"></div>
+    <script src="./assets/js/navbar.js"></script>
+    <div class="hero">
+      <img src="./assets/images/cloud.png" class="cloud" />
+      <div class="ocean">
+        <img src="./assets/images/water.png" class="water" />
+        <div class="boat">
+          <img src="./assets/images/boat.png" />
+        </div>
+      </div>
+    </div>
+    <div class="h1">
+      <h1>"Learn fruits names and their benefits"</h1>
+    </div>
+    <div class="container">
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/apple.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Apple</h2>
+            <p>
+              an apple a day is a healthier way. Apples may lower your chance of developing cancer, diabetes, and heart disease.Stabilizes blood sugar. “When you eat sugary, processed foods like doughnuts, the amount of glucose (sugar) in your blood spikes,”
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/banana.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Banana</h2>
+            <p>
+              Bananas are healthy, delicious, and versatile fruits. They're full of nutrients that could help prevent constipation, improve digestive and gut health, and promote recovery from intense activity. Eating one banana per day will provide: 12% of the DV for vitamin C.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/oranges.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Orange</h2>
+            <p>
+              Oranges are a vitamin-packed and healthy food, but moderation is key. They have a high concentration of acid, which can be irritating to the stomach, especially if you have gastroesophageal reflux disease (GERD).
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/guava.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Guava</h2>
+            <p>
+              Guavas are an excellent source of dietary fiber. Therefore, eating more guavas may aid healthy bowel movements and prevent constipation. Just one guava can provide 12% of your recommended daily intake of fiber (13). 
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/strawberry.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Strawberry</h2>
+            <p>
+              Enjoying these berries every day is a great way to help benefit you and your family's health. When you're looking for a healthy snack, think strawberries. Not only are they low in sugar, but the benefits of eating strawberries are many.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/pine.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Pine-apple</h2>
+              <p>
+                Pineapple and its compounds are linked to several health benefits, including improvements in digestion, immunity, and recovery from surgery. It contains nutrients, antioxidants, and other compounds, such as enzymes that can protect against inflammation and disease.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/chikoo.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Sapodilla</h2>
+              <p>
+                Sapodilla is an excellent source of fiber — a nutrient that's important for gut health, heart health, and body weight maintenance. More specifically, fiber helps fuel gut bacteria, keeps you regular, promotes feelings of fullness, and regulates blood sugar and cholesterol levels.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/water-melon.png" alt="" /></div>
+            <div class="content">
+              <h2>water-melon</h2>
+              <p>
+                Eating watermelon daily was associated with a decrease in subjects' body weight, body mass index, blood pressure, and waist circumference.Loaded With Lycopene. 1/15. The cheery red color comes from lycopene, an antioxidant.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/pome.jpg" alt="" /></div>
+            <div class="content">
+              <h2>pomegranate</h2>
+              <p>
+                Antioxidants protect our cells from damage caused by free radicals and reduce inflammation. Studies suggest that pomegranates can help protect your heart in many ways, such as lowering blood pressure as well as blood sugar levels.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/mango.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Mango</h2>
+              <p>
+                The primary benefit, in addition to being a really good source of vitamin C, is that (mangoes) are a decent source of vitamin A, folate and are pretty high in fiber, which is beneficial for colon cancer prevention, heart disease and weight control."
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/grapes.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Grapes</h2>
+              <p>
+                Grapes of all colors contain antioxidants, including gut-friendly, circulation-supporting polyphenols and anthocyanins, which have been shown to help protect against chronic inflammation, diabetes, certain cancers and heart disease.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/kiwi.jpg" alt="" /></div>
+            <div class="content">
+              <h2>kiwi</h2>
+              <p>
+                Kiwis are rich in vitamin C, copper, and vitamin K and contain smaller portions of many other important nutrients. Their impressive nutrition profile supports many avenues of health, including digestion, weight management, and blood sugar control.
+              </p>
+            </div>
+          </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>

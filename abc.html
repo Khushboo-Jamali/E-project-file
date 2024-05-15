@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC/abc</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url(./assets/images/abc.jpg);
+      background-size: 100% 100%;
+      background-position: center;
+      overflow: hidden;
+    }
+    .ocean {
+      height: 220px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+    .water {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      animation: water 10s linear infinite;
+    }
+    @keyframes water {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(1000px);
+      }
+    }
+    .boat {
+      width: 150px;
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .boat img {
+      width: 100%;
+      -webkit-box-reflect: below 0
+        linear-gradient(rgba(255, 225, 255, 0.1), rgba(255, 225, 255, 0.6));
+      animation: boat 2s linear infinite;
+    }
+    @keyframes boat {
+      0% {
+        transform: rotate(0deg) translateY(0);
+      }
+      25% {
+        transform: rotate(-1deg) translateY(-3px);
+      }
+      50% {
+        transform: rotate(0deg) translateY(-5px);
+      }
+      75% {
+        transform: rotate(1deg) translateY(-3px);
+      }
+      100% {
+        transform: rotate(0deg) translateY(0);
+      }
+    }
+    .cloud {
+      height: 250px;
+      position: absolute;
+      right: 0;
+      animation: cloud 10s linear infinite;
+    }
+    @keyframes cloud {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(500px);
+      }
+    }
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(60deg, #42ecab, #f797da, #e7f885 );
+      min-height: 100vh;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px 50px;
+      padding: 100px 50px;
+    }
+    .container .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 300px;
+      height: 350px;
+      background-color: #fff;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    }
+    .container .card:hover {
+      height: 430px;
+    }
+    .container .card .imgbox {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      height: 220px;
+      background: #333;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: 0.5s;
+    }
+    .container .card:hover .imgbox {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 2);
+    }
+
+    .container .card .imgbox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      object-fit: 100% 100%;
+    }
+    .container .card .content {
+      position: absolute;
+      top: 252px;
+      width: 100%;
+      padding: 0 30px;
+      height: 35px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .container .card:hover .content {
+      height: 350px;
+      top: 130px;
+    }
+    .container .card .content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #009688;
+    }
+    .container .card .content p {
+      color: #333;
+    }
+    .container .card .content a {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      padding: 8px 25px;
+      background: #00bcd4;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .img{
+      width: 100%;
+      height: 100%;
+    }
+    .img>img{
+      width: 100px;
+      height: 100px;
+    }
+
+  </style>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="header"></div>
+    <script src="./assets/js/navbar.js"></script>
+    <div class="hero">
+      <img src="./assets/images/cloud.png" class="cloud" />
+      <div class="ocean">
+        <img src="./assets/images/water.png" class="water" />
+      </div>
+      <div class="boat">
+        <img src="./assets/images/boat.png" alt="">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/A.jpg" alt="" /></div>
+        <div class="content">
+          <h2>A For Apple</h2>
+          <p>
+            A or a is the first letter of the English alphabet. The small letter, a or α, is used as a lower case vowel
+          </p>
+          <div class="img">
+            <img src=".//assets/images/apple.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/B.jpg" alt="" /></div>
+        <div class="content">
+          <h2>B For Ball</h2>
+          <p>
+            The second letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/ball.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/C.jpg" alt="" /></div>
+        <div class="content">
+          <h2>C For Cat</h2>
+          <p>
+            The third letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/cat.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/D.jpg" alt="" /></div>
+        <div class="content">
+          <h2>D For Dog</h2>
+          <p>
+            The fourth letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/dog.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/E.jpg" alt="" /></div>
+        <div class="content">
+          <h2>E For Elephant</h2>
+          <p>
+            The fifth letter of alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/eleph.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/F.jpg" alt="" /></div>
+        <div class="content">
+          <h2>F For Fish</h2>
+          <p>
+            The sixth letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/fish.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/G.jpg" alt="" /></div>
+        <div class="content">
+          <h2>G seventh Giraffe</h2>
+          <p>
+            The seventh letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/giraffe.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/H.jpg" alt="" /></div>
+        <div class="content">
+          <h2>H For Hen</h2>
+          <p>
+            The eight letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/hen.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/I.jpg" alt="" /></div>
+        <div class="content">
+          <h2>I For Ice-cream</h2>
+          <p>
+            The ninth letter of alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/ice.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/J.jpg" alt="" /></div>
+        <div class="content">
+          <h2>J For Jug</h2>
+          <p>
+            The tenth letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/jug.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/K.jpg" alt="" /></div>
+        <div class="content">
+          <h2>K For Kite</h2>
+          <p>
+            The eleven letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/kite.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/L.jpg" alt="" /></div>
+        <div class="content">
+          <h2>L For Lamp</h2>
+          <p>
+            The twelve letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/lamp.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/M.jpg" alt="" /></div>
+        <div class="content">
+          <h2>M For Monkey</h2>
+          <p>
+            The thirteen letter of alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/monkey.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/N.jpg" alt="" /></div>
+        <div class="content">
+          <h2>N For Nest</h2>
+          <p>
+            The fourteen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/nest.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/O.jpg" alt="" /></div>
+        <div class="content">
+          <h2>O seventh Orange</h2>
+          <p>
+            The fifteen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/orange.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/P.jpg" alt="" /></div>
+        <div class="content">
+          <h2>P For Parrot</h2>
+          <p>
+            The sixteen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/parrot.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/Q.jpg" alt="" /></div>
+        <div class="content">
+          <h2>Q For Queen</h2>
+          <p>
+            The seventeen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/queen.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/R.jpg" alt="" /></div>
+        <div class="content">
+          <h2>R For Rabbit</h2>
+          <p>
+            The eighteen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/rabbit.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/S.jpg" alt="" /></div>
+        <div class="content">
+          <h2>S For Sun</h2>
+          <p>
+            The nineteen letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/sun.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/T.jpg" alt="" /></div>
+        <div class="content">
+          <h2>T For Tree</h2>
+          <p>
+            The twenty letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/tree.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/U.jpg" alt="" /></div>
+        <div class="content">
+          <h2>U For Umbrella</h2>
+          <p>
+            The twenty-one letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/umbrella.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/V.jpg" alt="" /></div>
+        <div class="content">
+          <h2>V For Van</h2>
+          <p>
+            The twenty-two letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/van.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/W.jpg" alt="" /></div>
+        <div class="content">
+          <h2>W For Water</h2>
+          <p>
+            The twenty-three letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/water.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/X.jpg" alt="" /></div>
+        <div class="content">
+          <h2>X For X-ray</h2>
+          <p>
+            The twenty-four letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/x-ray.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/Y.jpg" alt="" /></div>
+        <div class="content">
+          <h2>Y For Yoyo</h2>
+          <p>
+            The twenty-five letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/yoyo.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+        <div class="imgbox"><img src="./assets/images/Z.jpg" alt="" /></div>
+        <div class="content">
+          <h2>Z For Zebra</h2>
+          <p>
+            The twenty-six letter of the alphabet.
+          </p>
+          <div class="img">
+            <img src=".//assets/images/zebra.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>

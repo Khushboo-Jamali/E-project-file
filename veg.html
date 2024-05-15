@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegetables</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url(./assets/images/veg.jpg);
+      background-size: 100% 100%;
+      background-position: center;
+      overflow: hidden;
+    }
+    .ocean {
+      height: 220px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+    .water {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      animation: water 15s linear infinite;
+    }
+    @keyframes water {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(1000px);
+      }
+    }
+    .cloud {
+      height: 250px;
+      position: absolute;
+      right: 0;
+      animation: cloud 10s linear infinite;
+    }
+    @keyframes cloud {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(500px);
+      }
+    }
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(60deg, #42ecab, #f797da, #e7f885 );
+      min-height: 100vh;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px 50px;
+      padding: 100px 50px;
+    }
+    .container .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 300px;
+      height: 350px;
+      background-color: #fff;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    }
+    .container .card:hover {
+      height: 430px;
+    }
+    .container .card .imgbox {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      height: 220px;
+      background: #333;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: 0.5s;
+    }
+    .container .card:hover .imgbox {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 2);
+    }
+
+    .container .card .imgbox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      object-fit: 100% 100%;
+    }
+    .container .card .content {
+      position: absolute;
+      top: 252px;
+      width: 100%;
+      padding: 0 30px;
+      height: 35px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .container .card:hover .content {
+      height: 350px;
+      top: 130px;
+    }
+    .container .card .content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #009688;
+    }
+    .container .card .content p {
+      color: #333;
+    }
+    .container .card .content a {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      padding: 8px 25px;
+      background: #00bcd4;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .h1{
+      width: 100%;
+      text-align: center;
+    }
+    .h1>h1{
+      padding: 20px 0;
+    }
+  </style>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="header"></div>
+    <script src="./assets/js/navbar.js"></script>
+    <div class="hero">
+      <img src="./assets/images/cloud.png" class="cloud" />
+      <div class="ocean">
+        <img src="./assets/images/water.png" class="water" />
+      </div>
+    </div>
+    <div class="h1">
+        <h1>"Learn Vegetable names and their benefits"</h1>
+      </div>
+    <div class="container">
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/potato.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Potato</h2>
+            <p>
+                They're rich in vitamin C, which is an antioxidant. Potatoes were a life-saving food source in early times because the vitamin C prevented scurvy. Another major nutrient in potatoes is potassium, an electrolyte which aids in the workings of our heart, muscles, and nervous system.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/tomato.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Tomato</h2>
+            <p>
+                Adding tomatoes to the diet has a positive effect on blood lipid levels and blood pressure thanks to its lycopene content. As a result, you will reduce your risk of atherosclerosis. In addition, the consumption of tomatoes can reduce the risk of other health problems such as high cholesterol, obesity, and cancer.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/onion.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Onion</h2>
+            <p>
+                Consuming onions daily can be beneficial, due to their rich nutrient content and numerous health properties. However, they may cause digestive discomfort to certain people, especially those with digestive issues.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/brinjal.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Brinjal</h2>
+            <p>
+                Yes, you can eat brinjal daily as part of a balanced diet. Brinjal is a nutritious vegetable that is low in calories and rich in fiber, vitamins, and minerals. It contains antioxidants, such as anthocyanins, which have been linked to various health benefits.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/garlic.jpg" alt="" /></div>
+          <div class="content">
+            <h2>Garlic</h2>
+            <p>
+                Eating 1-2 garlic cloves daily can have health benefits, but more can cause bad breath, heartburn, stomach issues, and other unpleasant side effects. It's best to enjoy it in moderation. For many home chefs, garlic is a favorite spice to cook with, thanks to its pungent taste and aroma.
+            </p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/bottle.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Bottle-gourd</h2>
+              <p>
+                Bottle gourd has been used traditionally to help with many health conditions like fever, cough, pain, and asthma. It has been used since ancient times for its benefits. It is also considered a good source of vitamin B, C, and other nutrients.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/chilies.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Green and Red chili</h2>
+              <p>
+                Green chillies are a rich source of beta–carotene, antioxidants and endorrphins while red chilies consumed in excess can cause internal inflammation which results in peptic ulcers.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/capsicum.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Capsicum</h2>
+              <p>
+                Capsicum offers an impressive nutritional profile containing vitamins, minerals, antioxidants and compounds specific to capsicums like capsanthin and capsorubin.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/cucumber.jpg" alt="" /></div>
+            <div class="content">
+              <h2>cucumber</h2>
+              <p>
+                Cucumber is a nutritious fruit with a high water content. Eating cucumber may help lower blood sugar, prevent constipation, and support weight loss. To maximize cucumber's health benefits, eat the peel, too. Though commonly thought to be a vegetable, cucumber is a fruit.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/cabbage.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Cabbage</h2>
+              <p>
+                Cabbage has 1 gram of fiber for every 10 calories. That helps fill you up, so you eat less. It also keeps you regular, and it could help lower your “bad” (LDL) cholesterol and control your blood sugar. Cabbage also has nutrients that keep the lining of your stomach and intestines strong.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/cauliflower.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Cauliflower</h2>
+              <p>
+                t's high in vitamins C and K, and is also a good source of folate, which supports cell growth and is essential during pregnancy. Cauliflower is fat-free and cholesterol-free. And it's low in sodium. A one-cup serving contains only 25 calories, 5 grams of carbohydrates and 2 grams of dietary fiber.
+              </p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/lady.jpg" alt="" /></div>
+            <div class="content">
+              <h2>Lady-Finger</h2>
+              <p>
+                Ladyfinger has vitamin C and is rich in fibre. The fibre may help remove the toxic waste, and vitamin C may help with pigmentation of the skin, repair the tissues of the body, and aid in managing psoriasis, acne, and other skin diseases.
+              </p>
+            </div>
+          </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>

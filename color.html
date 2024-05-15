@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Colors</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- custom css for navbar -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- css for cards -->
+    <link rel="stylesheet" href="./assets/css/card.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-image: url(./assets/images/coloring\ img.jpg);
+      background-size: 100% 100%;
+      background-position: center;
+      overflow: hidden;
+    }
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(60deg, #42ecab, #f797da, #e7f885 );
+      min-height: 100vh;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px 50px;
+      padding: 100px 50px;
+    }
+    .container .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 300px;
+      height: 350px;
+      background-color: #fff;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    }
+    .container .card:hover {
+      height: 300px;
+    }
+    .container .card .imgbox {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      height: 220px;
+      background: #333;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: 0.5s;
+    }
+    .container .card:hover .imgbox {
+      top: -100px;
+      scale: 0.75;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 2);
+    }
+
+    .container .card .imgbox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      object-fit: 100% 100%;
+    }
+    .container .card .content {
+      position: absolute;
+      top: 252px;
+      width: 100%;
+      padding: 0 30px;
+      height: 35px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .container .card:hover.content {
+      height: 350px;
+      top: 130px;
+    }
+    .container .card .content p {
+        margin-top: 50px;
+        font-size: 2em;
+      font-weight: 700;
+      color: #009688;
+    }
+    .h1{
+      width: 100%;
+      text-align: center;
+    }
+    .h1>h1{
+      padding: 20px 0;
+    }
+  </style>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="header"></div>
+    <script src="./assets/js/navbar.js"></script>
+    <div class="hero">
+      <!-- <img src="./assets/images/cloud.png" class="cloud" /> -->
+    </div>
+    <div class="h1">
+        <h1>"Learn Colors names"</h1>
+      </div>
+    <div class="container">
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/pink.jpg" alt="" /></div>
+          <div class="content">
+            <p>Pink</p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/green.jpg" alt="" /></div>
+          <div class="content">
+            <p>Green</p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/yellow.jpg" alt="" /></div>
+          <div class="content">
+            <p>Yellow</p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/gray.png" alt="" /></div>
+          <div class="content">
+            <p>Gray</p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+          <div class="imgbox"><img src="./assets/images/purple.jpg" alt="" /></div>
+          <div class="content">
+            <p>Purple</p>
+          </div>
+        </div>
+        <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/red.jpg" alt="" /></div>
+            <div class="content">
+              <p>Red</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/light green.png" alt="" /></div>
+            <div class="content">
+              <p>Sea Green</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/circule.jpg" alt="" /></div>
+            <div class="content">
+              <p>Orange</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/sky blue.jpg" alt="" /></div>
+            <div class="content">
+              <p>Sky Blue</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/brown.png" alt="" /></div>
+            <div class="content">
+              <p>Brown</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/light purple.png" alt="" /></div>
+            <div class="content">
+              <p>Light Purple</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/black.png" alt="" /></div>
+            <div class="content">
+              <p>Black</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/blue.jpg" alt="" /></div>
+            <div class="content">
+              <p>Blue</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/maroon.png" alt="" /></div>
+            <div class="content">
+              <p>Maroon</p>
+            </div>
+          </div>
+          <div class="card" style="--clr: var(#009688)" data-aos="fade-up">
+            <div class="imgbox"><img src="./assets/images/mustard.png" alt="" /></div>
+            <div class="content">
+              <p>Mustard</p>
+            </div>
+          </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Months/Days Name</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- custom css for navbar -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- css for cards -->
+    <link rel="stylesheet" href="./assets/css/card.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .shape-container {
+        /* background-image: url(./assets/images/bg.jpg); */
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .shape-cards h1 {
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .shape-cards {
+        transition: 2s;
+        width: 430px;
+        background-color: aqua;
+        justify-content: space-around;
+        padding-top: 20px;
+        border-radius: 10px;
+        border: 20px solid #ff7979;
+        box-shadow: inset 0px 0px 5px #fdfff29e, inset 5px 0px 40px #000;
+        padding-left: 18px;
+        padding-right: 10px;
+        height: 540px;
+        margin-top: 30px;
+      }
+      .main {
+        position: relative;
+        /* background-color: cornsilk; */
+        height: 370px;
+        width: 160px;
+        display: inline-block;
+        justify-content: space-between;
+        padding-top: 20px;
+        margin-right: 10px;
+      }
+      .center-box {
+        /* background-color: navy; */
+        margin-left: 90px;
+      }
+      .same {
+        height: 30px;
+        width: 140px;
+        background-color: brown;
+        border-radius: 20px;
+      }
+      .same2 {
+        height: 30px;
+        width: 140px;
+        background-color: chocolate;
+        border-radius: 20px;
+      }
+      .same3 {
+        height: 30px;
+        width: 140px;
+        background-color: olive;
+        border-radius: 20px;
+      }
+  
+      .same4 {
+        height: 30px;
+        width: 140px;
+        background-color: rgb(102, 32, 104);
+        border-radius: 20px;
+      }
+      /* ......THAT CSS IS CARDS H5 BECAUSE THEY CARDS HAVE SAME CLASS AND SAME H5.......... */
+  
+      .one {
+        margin-left: 20px;
+      }
+      h5 {
+        position: relative;
+        margin-top: -15px;
+        margin-bottom: -15px;
+        margin-left: 33px;
+        color: white;
+        font-size: 1.2rem;
+      }
+      .three {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      .five {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      .box-shadow {
+        transition: 1s;
+      }
+      .box-shadow:hover {
+        box-shadow: 0px 0px 5px #fdfff29e, 5px 0px 40px #000;
+      }
+      /* ......END THAT CSS IS CARDS H5 BECAUSE THEY CARDS HAVE SAME CLASS AND SAME H5.......... */
+  
+      /* ......START MONTH-CARDS CSS........ */
+      .shape-month h1 {
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      .shape-month {
+        align-items: center;
+        width: 450px;
+        background-color: aqua;
+        justify-content: space-around;
+        padding-top: 20px;
+        border-radius: 10px;
+        border: 20px solid #ff7979;
+        box-shadow: inset 0px 0px 5px #fdfff29e, inset 5px 0px 40px #000;
+        padding-left: 30px;
+        padding-right: 10px;
+        height: 540px;
+        margin-top: 30px;
+      }
+  
+      .main2 {
+        position: relative;
+        /* background-color: cornsilk; */
+        height: 400px;
+        width: 160px;
+        display: inline-block;
+        margin-top: -12px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-right: 10px;
+      }
+  
+      .month {
+        height: 25px;
+        width: 130px;
+        background-color: brown;
+        border-radius: 20px;
+      }
+      .seven {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      .eight {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      .month6 {
+        height: 25px;
+        width: 130px;
+        background-color: chocolate;
+        border-radius: 20px;
+      }
+      .month2 {
+        /* margin-top: 20px; */
+        height: 25px;
+        width: 130px;
+        background-color: chocolate;
+        border-radius: 20px;
+      }
+  
+      .month3 {
+        height: 25px;
+        width: 130px;
+        background-color: olive;
+        border-radius: 20px;
+      }
+  
+      .month4 {
+        height: 25px;
+        width: 130px;
+        background-color: rgb(102, 32, 104);
+        border-radius: 20px;
+      }
+      .month5 {
+        height: 25px;
+        width: 130px;
+        background-color: navy;
+        border-radius: 20px;
+      }
+      video{
+        width: 100%;
+      }
+      .rhyme{
+        margin-right: 20px;
+      }
+      .p>p{
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(255, 103, 136);
+        
+      }
+      .foot{
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="header"></div>
+    <script src="./assets/js/navbar.js"></script>
+    <div class="shape-container">
+      <div class="shape-cards box-shadow">
+        <h1>DAYS NAMES</h1>
+        <div class="main">
+          <div class="center-box">
+            <div class="one same"></div>
+            <h5>Monday</h5>
+            <div class="same"></div>
+          </div>
+
+          <div class="three same2"></div>
+          <h5>Tuesday</h5>
+          <div class="four same2"></div>
+
+          <div class="five same3"></div>
+          <h5>Wednesday</h5>
+          <div class="six same3"></div>
+
+          <div class="five same4"></div>
+          <h5>Thursday</h5>
+          <div class="six same4"></div>
+        </div>
+        <div class="main">
+          <div class="one same"></div>
+          <h5>Friday</h5>
+          <div class="same"></div>
+
+          <div class="three same2"></div>
+          <h5>Saturday</h5>
+          <div class="four same2"></div>
+
+          <div class="five same3"></div>
+          <h5>Sunday</h5>
+          <div class="six same3"></div>
+        </div>
+      </div>
+      <!-- .......SHAPE MONTH NAMES...... -->
+      <div class="shape-month box-shadow">
+        <h1>MONTH NAMES</h1>
+        <div class="main2">
+          <div class="one month"></div>
+          <h5>January</h5>
+          <div class="same"></div>
+
+          <div class="three month2"></div>
+          <h5>February</h5>
+          <div class="four month2"></div>
+
+          <div class="five month3"></div>
+          <h5>March</h5>
+          <div class="six month3"></div>
+
+          <div class="five month4"></div>
+          <h5>April</h5>
+          <div class="six month4"></div>
+
+          <div class="seven month5"></div>
+          <h5>May</h5>
+          <div class="seaven month5"></div>
+
+          <div class="eight month6"></div>
+          <h5>November</h5>
+          <div class="nine month6"></div>
+        </div>
+
+        <div class="main2">
+          <div class="one month"></div>
+          <h5>June</h5>
+          <div class="same"></div>
+
+          <div class="three month2"></div>
+          <h5>July</h5>
+          <div class="four month2"></div>
+
+          <div class="five month3"></div>
+          <h5>August</h5>
+          <div class="six month3"></div>
+
+          <div class="five month4"></div>
+          <h5>September</h5>
+          <div class="six month4"></div>
+
+          <div class="seven month5"></div>
+          <h5>October</h5>
+          <div class="seaven month5"></div>
+
+          <div class="eight month6"></div>
+          <h5>November</h5>
+          <div class="nine month6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- for rhymes -->
+    <div class="shape-container">
+      <div class="shape-month p">
+        <p>Learn Name of Days with the help of rhyme</p>
+        <div class="rhyme">
+          <video width="400" height="340" controls>
+            <source src="./assets/rhymes/Days of the Week Song _ CoComelon Nursery Rhymes & Kids Songs.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="shape-month p">
+        <p>Learn Name of Months with the help of rhyme</p>
+        <div class="rhyme">
+          <video width="400" height="340" controls>
+            <source src="./assets/rhymes/videoplayback (1).mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>
